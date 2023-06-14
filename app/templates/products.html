@@ -1,34 +1,6 @@
-{% exntends 'base.html %'}
-{% block title %}Opis projektu {% endblock %}
+{% extends 'base.html' %}
+{% block title %}Lista produktów{% endblock %}
 {% block content %}
-        <header class="container text-center">
-            <h1>Ceneo Web Scraper</h1>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light container" style="background-color: #fff3cd; color: #664d03; border-color: #ffecb5;">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-house-fill"></i> Strona główna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-cloud-download-fill"></i>
- Pobierz produkt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-list-stars"></i> Lista produktów</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-person-circle"></i> O autorze</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-					<h2>Lista produktów</h2>
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                           A list item
@@ -43,10 +15,4 @@
                           <span class="badge bg-primary rounded-pill">1</span>
                         </li>
                       </ul>
-                </div>
-            </div>
-        </div>
-        <footer class="container alert alert-success fixed-bottom">
-            (c) Katarzyna Wójcik, Uniwersytet Ekonomiczny w Krakowie
-        </footer>
 {% endblock %}

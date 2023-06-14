@@ -1,50 +1,17 @@
-{% exntends 'base.html %'}
+{% extends 'base.html' %}
 {% block title %}Opis projektu {% endblock %}
 {% block content %}
-        <header class="container text-center">
-            <h1>Ceneo Web Scraper</h1>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light container" style="background-color: #fff3cd; color: #664d03; border-color: #ffecb5;">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-house-fill"></i> Strona główna</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-cloud-download-fill"></i>
- Pobierz produkt</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-list-stars"></i> Lista produktów</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><i class="bi bi-person-circle"></i> O autorze</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-					<form method="POST" action="">
+					<form method="POST" action="{{url_for('extract')}}">
                         <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="product_id" class="col-form-label">Kod produktu</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" required id="product_id" name="product_id" placeholder="Wpisz kod produktu" class="form-control" aria-describedby="passwordHelpInline">
+                                <input type="text" required id="product_code" name="product_code" placeholder="Wpisz kod produktu" class="form-control" aria-describedby="passwordHelpInline">
                             </div>
                             <div class="col-auto">
                                 <input type="submit" class="btn btn-success" value="Pobierz">
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-        <footer class="container alert alert-success fixed-bottom">
-            (c) Katarzyna Wójcik, Uniwersytet Ekonomiczny w Krakowie
-        </footer>
 {% endblock %}
